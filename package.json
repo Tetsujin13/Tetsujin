@@ -1,0 +1,23 @@
+{
+  "name": "top-gato-hub",
+  "version": "1.0.0",
+  "description": "Interactive political views hub for the Top Gato movement",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "NODE_ENV=development node src/server.js"
+  },
+  "keywords": [
+    "politics",
+    "dashboard",
+    "top-gato"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "sqlite3": "^5.1.7"
+  }
+}
