@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Top Gato Liberty Hub</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;700&family=Space+Grotesk:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__badge">Top Gato Verified</div>
+      <div class="hero__content">
+        <h1>Top Gato Liberty Hub</h1>
+        <p>
+          A living dashboard for the movement that champions total economic freedom and fearless speech. Discover where
+          the community stands, and add your voice to the Top Gato consensus engine.
+        </p>
+      </div>
+      <div class="hero__mascot" aria-hidden="true">
+        <div class="hero__cat-face">
+          <div class="hero__cat-ear hero__cat-ear--left"></div>
+          <div class="hero__cat-ear hero__cat-ear--right"></div>
+          <div class="hero__cat-eyes"></div>
+          <div class="hero__cat-whiskers"></div>
+        </div>
+        <span class="hero__motto">Total Freedom. Total Clarity.</span>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="panel" aria-labelledby="dashboard-heading">
+        <div class="panel__header">
+          <h2 id="dashboard-heading">Movement Dashboard</h2>
+          <p class="panel__hint">Click a tile to explore the spectrum of views without losing your place.</p>
+        </div>
+        <div id="dashboard" class="dashboard" role="list"></div>
+      </section>
+
+      <aside class="panel" aria-labelledby="detail-heading">
+        <div class="panel__header">
+          <h2 id="detail-heading">Subject Insight</h2>
+          <p class="panel__hint">Insights update instantly as you dig down.</p>
+        </div>
+        <div id="detail" class="detail" aria-live="polite"></div>
+      </aside>
+
+      <section class="panel panel--form" aria-labelledby="share-heading">
+        <div class="panel__header">
+          <h2 id="share-heading">Share Your Stance</h2>
+          <p class="panel__hint">Log a perspective to shift the consensus in true Top Gato fashion.</p>
+        </div>
+        <form id="view-form" class="view-form">
+          <div class="form-row">
+            <label for="subject">Subject</label>
+            <input id="subject" name="subject" list="subject-options" placeholder="e.g. Economic Freedom" required />
+            <datalist id="subject-options"></datalist>
+          </div>
+          <div class="form-row">
+            <label for="slug">Dashboard Label</label>
+            <input id="slug" name="slug" placeholder="economic-freedom" pattern="[a-z0-9-]+" required />
+            <small>Use lowercase words separated by dashes.</small>
+          </div>
+          <div class="form-row">
+            <label for="description">Subject Context</label>
+            <textarea id="description" name="description" rows="2" placeholder="Why this subject matters"></textarea>
+          </div>
+          <div class="form-row">
+            <label for="stance">Your Stance</label>
+            <input id="stance" name="stance" placeholder="e.g. Strongly pro-deregulation" required />
+          </div>
+          <div class="form-row">
+            <label for="handle">Public Handle</label>
+            <input id="handle" name="handle" placeholder="@libertycat" required />
+          </div>
+          <div class="form-row">
+            <label for="confidence">Confidence</label>
+            <input id="confidence" name="confidence" type="range" min="0" max="100" step="5" value="50" />
+            <output id="confidence-value" for="confidence">50</output>
+          </div>
+          <button type="submit" class="button">Add My Voice</button>
+          <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Crafted for the Top Gato network of independent thinkers.</p>
+    </footer>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
